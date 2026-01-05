@@ -1,5 +1,4 @@
 "use client"
-import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
@@ -17,7 +16,7 @@ const Navbar_front = () => {
         <div className={`navbar scrolled`}>
             <div className="naming">
                 <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '16px', textDecoration: 'none' }}>
-                    <div className="icon-wrapper">
+                    <div className="nav-icon-wrapper">
                         <Image
                             src="/icon.png"
                             className='icon'

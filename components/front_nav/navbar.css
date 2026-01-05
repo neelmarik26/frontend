@@ -63,7 +63,7 @@
 }
 
 /* Icon wrapper for custom effects */
-.icon-wrapper {
+.nav-icon-wrapper {
     position: relative;
     width: 42px;
     height: 42px;
@@ -87,7 +87,7 @@
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icon-wrapper::before {
+.nav-icon-wrapper::before {
     content: '';
     position: absolute;
     top: -50%;
@@ -109,7 +109,7 @@
     100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
 }
 
-.naming:hover .icon-wrapper {
+.naming:hover .nav-icon-wrapper {
     transform: rotate(-15deg) scale(1.1);
     box-shadow: 
         0 0 50px rgba(120, 119, 198, 0.6),
@@ -213,7 +213,7 @@
     backdrop-filter: blur(25px) saturate(200%);
 }
 
-.navbar.scrolled .icon-wrapper {
+.navbar.scrolled .nav-icon-wrapper {
     transform: scale(0.9);
 }
 
@@ -230,7 +230,7 @@
         gap: 12px;
     }
 
-    .icon-wrapper {
+    .nav-icon-wrapper {
         width: 36px;
         height: 36px;
     }
