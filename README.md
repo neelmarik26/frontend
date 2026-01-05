@@ -1,25 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app). made by neel :)
+# 🏠 Smart Home Frontend (Antigravity Project)
 
-## Getting Started
+This repository contains the **frontend code for a Smart Home system**, built as part of my learning and experimentation with web technologies.
 
-First, run the development server:
+The goal of this project is to create a clean, simple, and responsive interface to control and monitor smart home devices.
 
-```bash
-npm run dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- Modern frontend structure
+- Clean and responsive UI
+- Easy to extend for new smart devices
+- Beginner-friendly codebase
 
+---
 
+## 🛠️ Tech Stack
 
-## Learn More
+- React 
+- Next.js 
 
-To learn more about Next.js, take a look at the following resources:
+## 👨‍💻 Author
 
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-
-
+Neel
+Student | Coding | Electronics | Smart Systems
