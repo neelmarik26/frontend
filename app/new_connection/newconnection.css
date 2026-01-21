@@ -1,3 +1,252 @@
-.new_connection{
-    background-color: aquamarine;
+/* Google Fonts Import - if not already in global.css, we add a fallback but ideal usage is global */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+.page-wrapper {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-family: 'Inter', sans-serif;
+    padding-top: 80px;
+    /* Space for fixed navbar if needed */
+}
+
+/* Container for the form to center it */
+.connection-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    min-height: calc(100vh - 80px);
+}
+
+/* Card Styling */
+.form-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+    padding: 3rem;
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: transform 0.3s ease;
+}
+
+.form-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Typography */
+.form-title {
+    color: #1a1a1a;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    letter-spacing: -0.5px;
+}
+
+.form-subtitle {
+    color: #666;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 0.95rem;
+}
+
+/* Form Layout */
+.connection-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+}
+
+.input-group label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+    margin-left: 4px;
+}
+
+/* Input Fields */
+.input-group input,
+.input-group textarea {
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: 2px solid #e1e4e8;
+    background-color: #f8f9fa;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    outline: none;
+    font-family: inherit;
+    width: 100%;
+    box-sizing: border-box;
+    /* Ensure padding doesn't affect width */
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #4f46e5;
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+    color: #a0aec0;
+}
+
+/* Error State */
+.input-group input.input-error,
+.input-group textarea.input-error {
+    border-color: #ef4444;
+    background-color: #fef2f2;
+}
+
+.input-group input.input-error:focus,
+.input-group textarea.input-error:focus {
+    box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.1);
+}
+
+.error-msg {
+    color: #ef4444;
+    font-size: 0.8rem;
+    margin-left: 4px;
+    animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Submit Button */
+.submit-btn {
+    margin-top: 1rem;
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.1), 0 2px 4px -1px rgba(79, 70, 229, 0.06);
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.2), 0 4px 6px -2px rgba(79, 70, 229, 0.1);
+    filter: brightness(1.1);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 640px) {
+    .connection-container {
+        padding: 1rem;
+    }
+
+    .form-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .form-title {
+        font-size: 1.75rem;
+    }
+}
+
+/* Input with Button Layout */
+.input-with-btn {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    /* Aligns input and button at the top */
+}
+
+/* Override input width in this context */
+.input-with-btn input {
+    flex: 1;
+}
+
+/* Verify Button */
+.verify-btn {
+    padding: 12px 20px;
+    background-color: #f3f4f6;
+    border: 2px solid #e5e7eb;
+    color: #4b5563;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    font-size: 0.95rem;
+}
+
+.verify-btn:hover {
+    background-color: #e5e7eb;
+    color: #1f2937;
+    border-color: #d1d5db;
+}
+
+.verify-btn:active {
+    transform: scale(0.98);
+}
+
+/* OTP Section */
+.otp-container {
+    margin-top: 10px;
+    display: flex;
+    gap: 12px;
+    animation: slideDown 0.3s ease-out;
+}
+
+.otp-input {
+    flex: 1;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 2px solid #e1e4e8;
+    background-color: #fff;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+}
+
+.otp-input:focus {
+    border-color: #4f46e5;
+    outline: none;
+}
+
+.confirm-otp-btn {
+    padding: 10px 16px;
+    background-color: #10b981;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.confirm-otp-btn:hover {
+    background-color: #059669;
+}
+.green{
+    background-color: #10b981;
 }
